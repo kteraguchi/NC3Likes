@@ -8,7 +8,7 @@
  * Likes Service Javascript
  *
  * @param {string} Controller name
- * @param {function($scope)} Controller
+ * @param {function('$http', '$q')} Controller
  */
 NetCommonsApp.factory('LikesSave', ['$http', '$q', function($http, $q) {
   return function(post) {
@@ -62,7 +62,7 @@ NetCommonsApp.factory('LikesSave', ['$http', '$q', function($http, $q) {
  * Likes Controller Javascript
  *
  * @param {string} Controller name
- * @param {function($scope, likes)} Controller
+ * @param {function($scope, LikesSave)} Controller
  */
 NetCommonsApp.controller('Likes', function($scope, LikesSave) {
 
