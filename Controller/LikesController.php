@@ -52,7 +52,7 @@ class LikesController extends LikesAppController {
  */
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('download');
+		$this->Auth->allow('like');
 	}
 
 /**
