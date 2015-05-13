@@ -179,7 +179,10 @@ class Like extends LikesAppModel {
 	public function validateLike($data) {
 		$this->set($data);
 		$this->validates();
-		return $this->validationErrors ? false : true;
+		if ($this->validationErrors) {
+			return false;
+		}
+		return true;
 	}
 
 }
