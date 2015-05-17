@@ -17,6 +17,42 @@
 class LikeBehavior extends ModelBehavior {
 
 /**
+ * Model name
+ *
+ * @var array
+ */
+	public $model;
+
+/**
+ * Key field name
+ *
+ * @var array
+ */
+	public $field;
+
+/**
+ * SetUp behavior
+ *
+ * @param object $model instance of model
+ * @param array $config array of configuration settings.
+ * @return void
+ */
+	public function setup(Model $model, $config = array()) {
+		if (isset($config['model'])) {
+			$this->model = $config['model'];
+		} else {
+			$this->model = $model->alias;
+		}
+		if (isset($config['field'])) {
+			$this->field = $config['field'];
+		} else {
+			$this->field = 'key';
+		}
+
+		parent::setup($model, $config);
+	}
+
+/**
  * After find callback. Can be used to modify any results returned by find.
  *
  * @param Model $model Model using this behavior
@@ -29,15 +65,15 @@ class LikeBehavior extends ModelBehavior {
 		$this->Like = ClassRegistry::init('Likes.Like', true);
 		$user = CakeSession::read('Auth.User');
 		foreach ($results as $i => $result) {
-			if (isset($result[$model->alias]['key'])) {
-				$likeCounts = $this->Like->getCountLike($result[$model->alias]['key'], Like::IS_LIKE);
-				$unlikeCounts = $this->Like->getCountLike($result[$model->alias]['key'], Like::IS_UNLIKE);
+			if (isset($result[$this->model][$this->field])) {
+				$likeCounts = $this->Like->getCountLike($result[$this->model][$this->field], Like::IS_LIKE);
+				$unlikeCounts = $this->Like->getCountLike($result[$this->model][$this->field], Like::IS_UNLIKE);
 			}
-			if (isset($result[$model->alias]['key']) && isset($user['id'])) {
-				$results[$i] = Hash::merge($results[$i], $this->Like->getLike($result[$model->alias]['key'], $user['id']));
+			if (isset($result[$this->model][$this->field]) && isset($user['id'])) {
+				$results[$i] = Hash::merge($results[$i], $this->Like->getLike($result[$this->model][$this->field], $user['id']));
 			}
-			$results[$i][$model->alias]['like_counts'] = isset($likeCounts) ? $likeCounts : 0;
-			$results[$i][$model->alias]['unlike_counts'] = isset($unlikeCounts) ? $unlikeCounts : 0;
+			$results[$i][$this->model]['like_counts'] = isset($likeCounts) ? $likeCounts : 0;
+			$results[$i][$this->model]['unlike_counts'] = isset($unlikeCounts) ? $unlikeCounts : 0;
 		}
 
 		return $results;
