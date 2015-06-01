@@ -5,7 +5,6 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-05-10 01:29+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -14,11 +13,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: Bbses/View/Elements/Blocks/edit_form.ctp:101
+#: Bbses/View/Elements/BbsBlocks/edit_form.ctp:79
+#: Blogs/View/Elements/Blocks/edit_form.ctp:110
 msgid "Use like button"
 msgstr ""
 
-#: Bbses/View/Elements/Blocks/edit_form.ctp:115
+#: Bbses/View/Elements/BbsBlocks/edit_form.ctp:93
+#: Blogs/View/Elements/Blocks/edit_form.ctp:124
 msgid "Use unlike button"
 msgstr ""
 

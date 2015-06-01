@@ -4,20 +4,23 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-05-10 01:29+0000\n"
-"PO-Revision-Date: 2015-05-10 10:34+0900\n"
+"PO-Revision-Date: 2015-06-01 18:05+0900\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: Poedit 1.7.5\n"
+"POT-Creation-Date: \n"
+"Language: ja\n"
+"X-Generator: Poedit 1.8.1\n"
 
-#: Bbses/View/Elements/Blocks/edit_form.ctp:101
+#: Bbses/View/Elements/BbsBlocks/edit_form.ctp:79
+#: Blogs/View/Elements/Blocks/edit_form.ctp:110
 msgid "Use like button"
 msgstr "ボタンを使用する"
 
-#: Bbses/View/Elements/Blocks/edit_form.ctp:115
+#: Bbses/View/Elements/BbsBlocks/edit_form.ctp:93
+#: Blogs/View/Elements/Blocks/edit_form.ctp:124
 msgid "Use unlike button"
 msgstr "ボタンを使用する"
