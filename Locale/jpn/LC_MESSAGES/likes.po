@@ -4,16 +4,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"PO-Revision-Date: 2015-06-01 18:05+0900\n"
+"PO-Revision-Date: 2015-06-03 11:19+0900\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"Language-Team: EMAIL@ADDRESS\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "POT-Creation-Date: \n"
-"Language: ja\n"
 "X-Generator: Poedit 1.8.1\n"
+"Language: ja\n"
 
 #: Bbses/View/Elements/BbsBlocks/edit_form.ctp:79
 #: Blogs/View/Elements/Blocks/edit_form.ctp:110
@@ -23,4 +23,4 @@ msgstr "ボタンを使用する"
 #: Bbses/View/Elements/BbsBlocks/edit_form.ctp:93
 #: Blogs/View/Elements/Blocks/edit_form.ctp:124
 msgid "Use unlike button"
-msgstr "ボタンを使用する"
+msgstr "ボタンも使用する"
