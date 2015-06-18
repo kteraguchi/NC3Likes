@@ -30,9 +30,8 @@ if (! $disabled) {
 	$hiddenFields = $tokenFields;
 	unset($hiddenFields['Like.is_liked']);
 	$hiddenFields = array_keys($hiddenFields);
-
 	$this->request->data = $data;
-	$tokens = $this->Token->getToken($tokenFields, $hiddenFields);
+	$tokens = $this->Token->getToken('Like', '/likes/likes/like/' . $frameId . '.json', $tokenFields, $hiddenFields);
 	$data += $tokens;
 }
 ?>

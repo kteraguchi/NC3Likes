@@ -75,7 +75,7 @@ class LikeBehavior extends ModelBehavior {
 			$results[$i][$this->model]['like_counts'] = isset($likeCounts) ? $likeCounts : 0;
 			$results[$i][$this->model]['unlike_counts'] = isset($unlikeCounts) ? $unlikeCounts : 0;
 		}
-
+//var_Dump($results);
 		return $results;
 	}
 }
